@@ -1,7 +1,12 @@
-这是可撤销的动态对称可搜索加密方案论文的实验项目。
-# Ubuntu22.04LTS 下Python3.7.9+Charm-Crypto+pypbc+Jupyter环境搭建
 
-## 1 前置工具
+# 可撤销的动态对称可搜索加密方案论文的实验项目
+虚拟机：Ubuntu22.04LTS <br>
+语言：Python3.7.9<br>
+第三方库：Charm-Crypto+pypbc <br>
+编程平台：Jupyter环境 <br>
+其他依赖详情见文件 requirement.txt
+## 环境搭建
+### 1 前置工具
 
 1. 为了方便本地操作，先安装openssh-server和net-tools
 
@@ -46,7 +51,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 trusted-host = https://pypi.tuna.tsinghua.edu.cn
 ```
 
-## 安装git
+### 安装git
 
 ```shell
 sudo apt install git
@@ -72,7 +77,7 @@ git clone https://gitee.com/liihoo/charm.git
 git clone https://gitee.com/liihoo/pypbc.git
 ```
 
-## 安装GMP
+### 安装GMP
 
 ```shell
 sudo tar -jxvf gmp-5.1.3.tar.bz2
@@ -94,7 +99,7 @@ sudo make
 sudo make install
 ```
 
-## 安装PBC
+### 安装PBC
 
 ```shell
 sudo tar -zxvf pbc-0.5.14.tar.gz
@@ -133,7 +138,7 @@ sudo vim /etc/ld.so.conf
 sudo ldconfig
 ```
 
-## 安装Python3.7.9
+### 安装Python3.7.9
 新建一个文件用于安装目录，比如/opt/python3/python3.7.9
 ```shell
 sudo tar -zxvf Python-3.7.9.tgz
@@ -166,7 +171,7 @@ sudo ln -s /opt/python3/python3.7.9/bin/python3.7 /usr/bin/python3.7
 pip3.7 install pyparsing==2.2.1
 ```
 
-## 安装Jupyter
+### 安装Jupyter
 
 ```shell
 pip3.7 install jupyter notebook
@@ -216,7 +221,7 @@ c.NotebookApp.port =8888 #任意指定一个端口
 c.NotebookApp.password = u'sha:..' #之前复制的密码
 ```
 
-## 安装charm-crypto
+### 安装charm-crypto
 
 打开charm-crypto的[GitHub](https://github.com/JHUISI/charm)地址，下载源码的压缩包
 
@@ -249,7 +254,7 @@ sudo make
 sudo make install
 ```
 
-## 安装pypbc
+### 安装pypbc
 
 ```shell
 cd pypbc
@@ -266,7 +271,7 @@ sudo python3.7 setup.py install
 sudo pip3.7 install pypbc
 ```
 
-## 后续
+### 后续
 
 删除所有自己安装的gmp库
 
